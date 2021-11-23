@@ -1,0 +1,108 @@
+.box{
+      position: absolute;
+      display: none;
+      top: 5rem;
+      right: 4rem;
+    width: 20rem;
+    z-index: 2;
+      background-color: $Light-grayish-blue;
+      box-shadow: 0 5px 10px $Dark-grayish-blue;
+      text-align: center;
+      padding-bottom: 1em;
+      @include mobile-view{
+        position: absolute;
+        width: 28rem;
+        height: 23rem;
+        top: 8rem;
+      right: 10rem;
+
+      }
+      &__title {
+        padding: 1em;
+        text-align: left;
+        @include mobile-view{
+          font-size: 2rem;
+          padding: 0.5em;
+        }
+      }
+      &__header{
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          padding: 0 1em;
+          @include mobile-view{
+            padding: 3em 0;
+          }
+          & .image{
+              width: 3.5rem;
+              border-radius: 5px;
+              @include mobile-view{
+                width: 5rem;
+              }
+          }
+          & .info{
+              padding-top: 2em;
+              text-align: left;
+              @include mobile-view{
+                font-size: 1.2rem;
+                padding-top: 0;
+              }
+               & .content{
+              color: $Dark-grayish-blue;
+                }
+            & .cost-price{
+              color: $Dark-grayish-blue;
+              & .total-price{
+                  color: black;
+              }
+            }
+          }
+          & .img{
+            width: 1rem;
+            @include mobile-view{
+              width: 1.5rem;
+            }
+          }
+      }
+      & .checkout-btn{
+          width: 17.5rem;
+          padding: .7em;
+          border-radius: 5px;
+          border: none;
+          background-color: $Orange;
+          color: white;
+          @include mobile-view{
+            width: 25rem;
+            font-size: 1.2em;
+          }
+          &:hover{
+            opacity: 0.75;
+            cursor: pointer;
+          }
+      }
+};
+
+.menu-right{
+  & .shopping-cart{
+    & .cart{
+      position: relative;
+      &-display{
+        width: 1.3rem;
+        height: 1.3rem;
+        border-radius: 50%;
+        background-color: $Orange;
+        color: white;
+        position: absolute;
+        top: -1em;
+        left: 1em;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.show .box{
+  display: block;
+}

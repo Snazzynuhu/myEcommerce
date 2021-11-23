@@ -1,0 +1,105 @@
+.light-box {
+  visibility: hidden;
+  z-index: -10;
+  &.open-modal {
+    visibility: visible;
+    z-index: 10;
+  }
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+}
+
+.light-box__product-display {
+  width: 50%;
+  height: 50%;
+  padding-left: 5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  & .close-btn {
+    position: absolute;
+    right: 6.5rem;
+    top: -7rem;
+    background-color: transparent;
+    border: none;
+    &-icon {
+      //COLOR NOT REFLECTING
+      color: $Orange;
+      & img {
+        color: chartreuse;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  & .prev-btn {
+    position: absolute;
+    top: 30%;
+    left: 24.5%;
+    display: grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: none;
+    &:hover {
+      cursor: pointer;
+    }
+    & img {
+      //COLOR NOT REFLECTING
+      color: green;
+    }
+  }
+  & .next-btn {
+    position: absolute;
+    top: 30%;
+    right: 12.5%;
+    display: grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: none;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__box {
+    width: 25rem;
+    height: 25rem;
+    position: relative;
+    & img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 2em;
+      border-radius: 5px;
+    }
+  }
+  &__thumbnails {
+    width: 20rem;
+    @include flex-jc-ai;
+    & img {
+      margin-top: 1em;
+      width: 4em;
+      border-radius: 5px;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.5;
+        border: 2px solid $Orange;
+      }
+    }
+  }
+}

@@ -1,0 +1,232 @@
+@import "variable";
+@import "mixin";
+@import "config";
+@import "modal";
+@import "cart";
+@import "header";
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+    @include mobile-view{
+      display: flex;
+      flex-direction: column;
+    }
+
+  .product-display {
+    width: 50%;
+    height: 50%;
+    padding-left: 5em;
+    @include mobile-view{
+    width: 80%;
+    height: 50%;
+    margin-right: auto;
+    text-align: center;
+    align-items: center;
+    }
+    &__box {
+      width: 25rem;
+      height: 25rem;
+      position: relative;
+      @include mobile-view{
+        width: 30rem;
+        height: 30rem;
+      }
+      & img {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 2em;
+        border-radius: 10px;
+      }
+      .prev-btn-desk{
+         position: absolute;
+          top: 50%;
+          left: 1.5em;
+          display: grid;
+          place-items: center;
+          width: 3rem;
+          height: 3rem;
+          border-radius: 50%;
+          border: none;
+          display: none;
+          @include mobile-view{
+            display: block;
+          }
+          & img{
+            width: 3rem;
+            height: 3rem;
+            background-color: white;
+            border-radius: 50%;
+            padding: 1em;
+          }
+           &:hover{
+          cursor: pointer;
+           }
+      }
+       .next-btn-desk{
+         position: absolute;
+          top: 50%;
+          right: 1.5em;
+          display: grid;
+          place-items: center;
+          width: 3rem;
+          height: 3rem;
+          border-radius: 50%;
+          border: none;
+            display: none;
+          @include mobile-view{
+            display: block;
+          }
+          & img{
+            width: 3rem;
+            height: 3rem;
+            background-color: white;
+            border-radius: 50%;
+            padding: 1em;
+          }
+           &:hover{
+          cursor: pointer;
+           }
+      }
+    }
+    &__thumbnails {
+      width: 25rem;
+      @include flex-jc-ai;
+      @include mobile-view{
+        display: none;
+      }
+      & img {
+        margin-top: 1em;
+        width: 5em;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.7;
+          border: 2px solid $Orange;
+        }
+      }
+    }
+  }
+
+  .info-display {
+    width: 50%;
+    @include mobile-view{
+      width: 75%;
+      margin-left: 10%;
+    }
+    &-title {
+      color: $Orange;
+      margin-bottom: 1em;
+      @include mobile-view{
+        margin-top: 1.5em;
+      }
+    }
+    &-limited {
+      color: $Very-vark-blue;
+      font-size: 2.8rem;
+      margin-bottom: 0.5em;
+      padding-right: 2em;
+      @include mobile-view{
+        margin-bottom: 0;
+      }
+    }
+    &-about {
+      color: $Dark-grayish-blue;
+      font-weight: map-get($fontWeights, bold);
+      padding-right: 7em;
+      margin-bottom: 1em;
+    }
+  }
+
+ 
+}
+
+.price {
+  width: 100%;
+  margin-bottom: 2em;
+  @include mobile-view{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+  }
+  &__cost {
+    font-weight: map-get($fontWeights, bold);
+    font-size: 1.5rem;
+    &-discount {
+      color: $Orange;
+      font-size: 0.3em;
+      border-radius: 3px;
+      background-color: $Pale-orange;
+      padding: 0 5px;
+      position: relative;
+      top: -2px;
+      margin-left: 5px;
+    }
+  }
+  &__old-cost {
+    text-decoration: line-through;
+    color: $Grayish-blue;
+  }
+}
+.cart-calc {
+  @include flex-jc-ai;
+  padding-right: 7em;
+  @include mobile-view{
+    flex-direction: column;
+  }
+}
+.add-remove-btn {
+  @include flex-jc-ai;
+  padding: 5px;
+  width: 15rem;
+  height: 2.5rem;
+  border-radius: 5px;
+  background-color: rgba(220, 236, 236, 0.774);
+  @include mobile-view{
+    width: 100%;
+    margin-bottom: .5em;
+  }
+  .subtract-btn,
+  .plus-btn {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    @include flex-jc-ai;
+    &:hover{
+      opacity: 0.5;
+    }
+  }
+}
+.add-to-cart {
+  width: 15rem;
+  height: 2.5rem;
+  background: $Orange;
+  text-align: center;
+  padding: 0.65em;
+  border-radius: 5px;
+   @include mobile-view{
+    width: 100%;
+  }
+  &:hover{
+  cursor: pointer;
+  opacity: 0.8;
+  }
+  &-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  &-img {
+    color: white;
+    width: 0.85em;
+    margin-right: 0.5em;
+  }
+}
+.attribution {
+  text-align: center;
+}

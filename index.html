@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="./styles/main.css" />
+
+    <title>Frontend Mentor | E-commerce product page</title>
+    <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+  </head>
+  <body>
+    <div class="header">
+      <header>
+        <div class="hamburger">
+          <button class="hamburger__menu">
+            <span>
+          <img src="./images/icon-menu.svg" alt="hamburger" class="hamburger__menu-bars" >
+            </span>
+             <span>
+          <img src="./images/icon-close.svg" alt="hamburger" class="hamburger__menu-close">
+            </span>
+          </button>
+        </div>
+        <div class="logo">
+          <img src="./images/logo.svg" alt="" />
+        </div>
+        <div class="menu">
+          <ul class="menu__list">
+            <li class="menu__list__item">Collections</li>
+            <li class="menu__list__item">Men</li>
+            <li class="menu__list__item">Women</li>
+            <li class="menu__list__item">About</li>
+            <li class="menu__list__item">Contact</li>
+          </ul>
+        </div>
+        <div class="menu-right">
+          <div class="shopping-cart">
+              <div class="cart"
+              ><img class="cart-svg" src="./images/icon-cart.svg" alt="cart"
+            /> <span class="cart-display"></span>
+          </div>
+             <div class="box">
+              <h3 class="box__title">Cart</h3>
+              <hr />
+              <div class="box__header">
+                <img src="./images/image-product-1-thumbnail.jpg" alt="product-img" class="image">
+                <div class="info">
+                  <p class="content">Fall Limited Edition Sneakers</p>
+              <h3 class="cost-price">$125.00 x <span class="unit">0</span>
+                <span class="total-price">$000.00</span>
+              </h3>
+                </div>
+              <img class="img" src="./images/icon-delete.svg" alt="icon-delete">
+              </div>
+              <button class="checkout-btn">Checkout</button>
+    </div>
+          </div>
+          <img
+            src="./images/image-avatar.png"
+            alt="customer-image"
+            class="avatar"
+          />
+        </div>
+      </header>
+      <div class="main">
+        <section class="product-display">
+          <div class="product-display__box">
+            <img class="desk-image" src="./images/image-product-1.jpg" alt="" />
+            <button class="prev-btn-desk"><img id="prev-btn-desk" src="./images/icon-previous.svg" alt="icon-previous"></button>
+          <button class="next-btn-desk"><img id="next-btn-desk" src="./images/icon-next.svg" alt="icon-next"></button>
+          </div>
+          <div class="product-display__thumbnails">
+            <img
+              src="./images/image-product-1-thumbnail.jpg"
+              alt=""
+              class="thumbnail"
+            />
+
+            <img
+              src="./images/image-product-2-thumbnail.jpg"
+              alt=""
+              class="thumbnail"
+            />
+
+            <img
+              src="./images/image-product-3-thumbnail.jpg"
+              alt=""
+              class="thumbnail"
+            />
+
+            <img
+              src="./images/image-product-4-thumbnail.jpg"
+              alt=""
+              class="thumbnail"
+            />
+          </div>
+        </section>
+        <section class="info-display">
+          <h6 class="info-display-title">SNEAKER COMPANY</h6>
+          <h1 class="info-display-limited">Fall Limited Edition Sneakers</h1>
+          <p class="info-display-about">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+          <div class="price">
+            <p class="price__cost">
+              $125.00 <span class="price__cost-discount">50%</span>
+            </p>
+            <p class="price__old-cost">$250.00</p>
+          </div>
+          <div class="cart-calc">
+            <div class="add-remove-btn">
+              <button class="subtract-btn">
+                <img src="./images/icon-minus.svg" alt="minus" />
+              </button>
+              <h3 class="value">0</h3>
+              <!-- <input type="number" class="value" min="0"> -->
+              <button class="plus-btn">
+                <img src="./images/icon-plus.svg" alt="plus" />
+              </button>
+            </div>
+            <div class="add-to-cart">
+              <img
+                src="./images/icon-cart.svg"
+                alt=""
+                class="add-to-cart-img"
+              />
+              <button class="add-to-cart-btn">Add to cart</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    <!-- MODAL DISPLAY -->
+      <div class="light-box">
+        <div class="light-box__overlay"></div>
+         <section class="light-box__product-display">
+        <button class="close-btn"><img class="close-btn-icon" src="./images/icon-close.svg" alt="close-btn"></button>
+          <div class="light-box__product-display__box">
+            <img src="./images/image-product-1.jpg" alt="" class="modal-image"/>
+          </div>
+          <button class="prev-btn"><img class="prev-btn-icon" src="./images/icon-previous.svg" alt="icon-previous"></button>
+          <button class="next-btn"><img class="next-btn-icon" src="./images/icon-next.svg" alt="icon-next"></button>
+          <div class="light-box__product-display__thumbnails">
+            <img
+              src="./images/image-product-1-thumbnail.jpg"
+              alt=""
+              class="thumb-one"
+            />
+            <img
+              src="./images/image-product-2-thumbnail.jpg"
+              alt=""
+              class="thumb-two"
+            />
+            <img
+              src="./images/image-product-3-thumbnail.jpg"
+              alt=""
+              class="thumb-three"
+            />
+            <img
+              src="./images/image-product-4-thumbnail.jpg"
+              alt=""
+              class="thumb-four"
+            />
+          </div>
+        </section>
+      </div>
+
+    </div>
+
+    <br />
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/Snazzynuhu">H.NUHU</a>.
+    </div>
+    <script src="js/main.js" type="text/javascript"></script>
+  </body>
+</html>

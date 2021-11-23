@@ -1,0 +1,15 @@
+@mixin flex-jc-ai {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin transition-style($style) {
+  transition: all 0.5s $style;
+}
+
+@mixin mobile-view {
+  @media (max-width: 68.5rem) {
+    @content;
+  }
+} ;
